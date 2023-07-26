@@ -1,9 +1,12 @@
 import React from 'react';
 import LogoSvg from '../../images/icons/LogoSvg';
+import HeroCalculatorForm from './HeroCalculatorForm';
 
 function HeroHeader() {
-    return (
-      <header className="hero-header-background">
+  return (
+    <>
+      <div className="hero-header-background"></div>
+      <header>
         <div className="hero-header-container">
           <LogoSvg />
           <h1 className="font_heading_l hero-header-title">
@@ -15,9 +18,11 @@ function HeroHeader() {
             determinant of a healthy weight, it offers a valuable starting point
             to evaluate your overall health and well-being.
           </p>
+          <HeroCalculatorForm />
         </div>
       </header>
-    );
+    </>
+  );
 }
 
 export default HeroHeader;

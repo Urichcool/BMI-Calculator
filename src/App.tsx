@@ -4,7 +4,11 @@ import HeroHeader from './components/Hero/HeroHeader';
 function App() {
   return (
     <div className="App">
-      <HeroHeader/>
+      
+      <div className="container">
+        <HeroHeader />
+
+      </div>
     </div>
   );
 }
