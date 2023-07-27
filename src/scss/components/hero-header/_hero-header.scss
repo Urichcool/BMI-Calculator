@@ -9,7 +9,8 @@
   @include desktop {
     align-items: flex-start;
     justify-content: flex-start;
-    padding-top: 76px;
+    padding-top: 75px;
+    padding-left: 116px;
   }
 }
 
@@ -46,14 +47,15 @@
 .hero-header-title {
   text-align: center;
   margin-bottom: 24px;
+  width: 100%;
   max-width: 327px;
   @include tablet {
     max-width: 686px;
   }
   @include desktop{
     margin-bottom: 35px;
-    max-width: 564px;
-    text-align: start;
+    max-width: 460px;
+    text-align:left;
     font-size: 64px;
     letter-spacing: -3.2px;
   }
@@ -61,6 +63,7 @@
 
 .hero-header-text {
   text-align: center;
+  width: 100%;
   max-width: 327px;
   @include tablet {
     max-width: 686px;
