@@ -2,6 +2,10 @@ import React from 'react';
 import LogoSvg from '../../images/icons/LogoSvg';
 
 function HeroHeader() {
+
+
+
+
   return (
     <>
       <div className="hero-header-background"></div>

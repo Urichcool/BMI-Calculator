@@ -28,6 +28,10 @@
   padding: 24px;
 }
 
+.hero-header-calculator-form-radio{
+display: flex;
+}
+
 .hero-header-calculator-form-radio-buttons {
   margin-top: 24px;
   display: flex;
@@ -43,7 +47,15 @@
   height: 31px;
   cursor: pointer;
    border: 1px solid #D8E2E7;
+   transition: 500ms;
+&:checked{
+ background: center / contain no-repeat url('../../../images/radio-cheked.svg');
 
+}
+&:hover,
+&:focus{
+  border-color: $blue;
+}
 }
 
 .hero-header-calculator-form-radio-label {
