@@ -28,8 +28,9 @@
   padding: 24px;
 }
 
-.hero-header-calculator-form-radio{
-display: flex;
+.hero-header-calculator-form-radio {
+  display: flex;
+  margin-bottom: 24px;
 }
 
 .hero-header-calculator-form-radio-buttons {
@@ -46,19 +47,100 @@ display: flex;
   width: 31px;
   height: 31px;
   cursor: pointer;
-   border: 1px solid #D8E2E7;
-   transition: 500ms;
-&:checked{
- background: center / contain no-repeat url('../../../images/radio-cheked.svg');
-
-}
-&:hover,
-&:focus{
-  border-color: $blue;
-}
+  border: 1px solid #d8e2e7;
+  transition: 500ms;
+  &:checked {
+    background: center / contain no-repeat
+      url("../../../images/radio-cheked.svg");
+  }
+  &:hover,
+  &:focus {
+    border-color: $blue;
+  }
 }
 
 .hero-header-calculator-form-radio-label {
   display: flex;
   align-items: center;
+}
+
+.hero-header-form-meric-inputs-container {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.hero-header-form-meric-inputs {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include tablet {
+    margin-right: 24px;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.hero-header-form-label {
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.hero-header-form-input {
+  width: 100%;
+  border-radius: 12px;
+  outline: none;
+  position: relative;
+  display: block;
+  border: 1px solid #d8e2e7;
+  padding: 20px 24px;
+  transition: 500ms;
+  &:hover,
+  &:focus {
+    border-color: $blue;
+  }
+  &::placeholder {
+    opacity: 0.25;
+  }
+}
+
+.hero-header-form-input-unit {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  color: $blue;
+}
+
+.hero-header-form-imperic-inputs-container{
+  display: flex;
+align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 16px;
+  &:last-child{
+    margin-bottom: 0px;
+  }
+}
+
+
+
+.hero-header-form-imperic-inputs{
+  display: flex;
+  flex-direction: column;
+ position: relative;
+ margin-right: 16px;
+ &:last-child{
+  margin-right: 0px;
+ }
+ @include tablet{
+  margin-right: 24px;
+&:last-child{
+  margin-right: 0px;
+ }
+ }
 }

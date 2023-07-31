@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import HeroHeaderFormInputs from "./HeroInputs/HeroHeaderInputs";
 
-function HeroCalculatorForm() {
+const HeroCalculatorForm = () => {
   const [radioValue, setRadioValue] = useState<string>("metric");
 
   function changeValue(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -19,7 +20,7 @@ function HeroCalculatorForm() {
                 type="radio"
                 id="metric"
                 value="metric"
-                checked={radioValue === "metric" ? true : false}
+                checked={radioValue === "metric"}
                 onChange={changeValue}
               />
               <label className="font_body_m_bold hero-header-calculator-form-radio-label">
@@ -32,7 +33,7 @@ function HeroCalculatorForm() {
                 type="radio"
                 id="imperial"
                 value="imperial"
-                checked={radioValue === "imperial" ? true : false}
+                checked={radioValue === "imperial"}
                 onChange={changeValue}
               />
               <label className="font_body_m_bold hero-header-calculator-form-radio-label">
@@ -40,10 +41,11 @@ function HeroCalculatorForm() {
               </label>
             </div>
           </div>
+          <HeroHeaderFormInputs radioValue={radioValue} />
         </form>
       </div>
     </div>
   );
-}
+};
 
 export default HeroCalculatorForm;
