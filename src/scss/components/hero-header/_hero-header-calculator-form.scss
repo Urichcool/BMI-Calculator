@@ -73,7 +73,6 @@
 .hero-header-form-meric-inputs {
   display: flex;
   flex-direction: column;
-  position: relative;
   margin-bottom: 16px;
   &:last-child {
     margin-bottom: 0;
@@ -96,8 +95,6 @@
   width: 100%;
   border-radius: 12px;
   outline: none;
-  position: relative;
-  display: block;
   border: 1px solid #d8e2e7;
   padding: 20px 24px;
   transition: 500ms;
@@ -112,35 +109,32 @@
 
 .hero-header-form-input-unit {
   position: absolute;
-  top: 50%;
+  top: 21px;
   right: 24px;
   color: $blue;
 }
 
-.hero-header-form-imperic-inputs-container{
+.hero-header-form-imperic-inputs-container {
   display: flex;
-align-items: flex-end;
+  align-items: flex-end;
   justify-content: center;
   margin-bottom: 16px;
-  &:last-child{
+  &:last-child {
     margin-bottom: 0px;
   }
 }
 
-
-
-.hero-header-form-imperic-inputs{
+.hero-header-form-imperic-inputs {
   display: flex;
   flex-direction: column;
- position: relative;
- margin-right: 16px;
- &:last-child{
-  margin-right: 0px;
- }
- @include tablet{
-  margin-right: 24px;
-&:last-child{
-  margin-right: 0px;
- }
- }
+  margin-right: 16px;
+  &:last-child {
+    margin-right: 0px;
+  }
+  @include tablet {
+    margin-right: 24px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 }
