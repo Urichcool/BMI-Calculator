@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HeroHeaderFormInputs from "./HeroInputs/HeroHeaderInputs";
 import HeroRadioButtons from "./HeroInputs/HeroRadioButtons";
+import HeroHeaderFormResult from "./HeroHeaderFormResult";
 
 const HeroCalculatorForm = () => {
   const [radioValue, setRadioValue] = useState<string>("metric");
@@ -17,6 +18,7 @@ const HeroCalculatorForm = () => {
           <HeroRadioButtons radioValue={radioValue} changeValue={changeValue} />
           <HeroHeaderFormInputs radioValue={radioValue} />
         </form>
+        <HeroHeaderFormResult />
       </div>
     </div>
   );

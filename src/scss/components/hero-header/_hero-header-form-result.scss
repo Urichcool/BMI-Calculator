@@ -1,0 +1,36 @@
+@import "../../mixins/mixins";
+
+.hero-header-form-result {
+  width: 100%;
+  background: linear-gradient(90deg, #345ff6 0%, #587dff 100%);
+  border-radius: 16px;
+  margin-top: 24px;
+  @include tablet {
+    border-radius: 16px 999px 999px 16px;
+  }
+}
+
+.hero-header-form-result-container {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.hero-header-form-result-text-container {
+  max-width: 267px;
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include tablet {
+    margin-bottom: 0;
+  }
+  @include desktop {
+    max-width: 206px;
+  }
+}
