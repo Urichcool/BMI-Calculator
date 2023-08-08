@@ -16,7 +16,7 @@ const HeroHeaderFormResult = () => {
             </p>
           </div>
           <div className="hero-header-form-result-text-container">
-            <p className="font_body_s">
+            <p className="font_body_s" style={{ color: "#FFF" } }>
               Your BMI suggests you’re a healthy weight. Your ideal weight is
               between 63.3kgs - 85.2kgs.
             </p>
