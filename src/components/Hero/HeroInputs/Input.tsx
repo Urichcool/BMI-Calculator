@@ -9,13 +9,19 @@ interface InputProps {
 }
 
 const Input: FC<InputProps> = ({ units, label, className }) => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState<string>("");
+  const [isError, setIsError] = useState<boolean>(false);
 
   const inputOnChangeHandler = (
     e: React.ChangeEvent<HTMLInputElement>
   ): void => {
-    if (Number(e.target.value) <= 999) {
+    if (Number(e.target.value) <= 999 && e.target.value !== "0") {
       setInputValue(e.target.value);
+    } else {
+      setIsError(true);
+      setTimeout(() => {
+        setIsError(false);
+      }, 2000);
     }
   };
 
@@ -28,7 +34,13 @@ const Input: FC<InputProps> = ({ units, label, className }) => {
           onChange={inputOnChangeHandler}
           placeholder="0"
           className="hero-header-form-input font_heading_m"
+          style={{ borderColor: isError ? "red" : "" }}
         />
+        {isError && (
+          <p className="font_body_s hero-header-form-input-error-text">
+            Please enter a valid value
+          </p>
+        )}
         <span className="font_heading_m hero-header-form-input-unit">
           {units}
         </span>
