@@ -1,6 +1,8 @@
 import React from 'react';
+import { imperialBMIFunc,metricBMIFunc } from '../../utils/CalculatorFunc';
 
 const HeroHeaderFormResult = () => {
+  
     return (
       <div className="hero-header-form-result">
         <div className="hero-header-form-result-container">
@@ -12,11 +14,11 @@ const HeroHeaderFormResult = () => {
               Your BMI is...
             </p>
             <p className="font_heading_l" style={{ color: "#FFF" }}>
-              0
+              {imperialBMIFunc(11, 11, 5, 11)}
             </p>
           </div>
           <div className="hero-header-form-result-text-container">
-            <p className="font_body_s" style={{ color: "#FFF" } }>
+            <p className="font_body_s" style={{ color: "#FFF" }}>
               Your BMI suggests you’re a healthy weight. Your ideal weight is
               between 63.3kgs - 85.2kgs.
             </p>
