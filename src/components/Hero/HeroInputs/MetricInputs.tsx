@@ -19,7 +19,7 @@ const MetricInputs: FC<IMetricInputsProps> = ({ metricDataHandler }) => {
 
   useEffect(() => {
     metricDataHandler({ cm, kg });
-  }, [cm, kg]);
+  }, [metricDataHandler, cm, kg]);
 
   return (
     <div className="hero-header-form-meric-inputs-container">
