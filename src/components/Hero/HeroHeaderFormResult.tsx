@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { imperialBMIFunc,metricBMIFunc } from '../../utils/CalculatorFunc';
 
-const HeroHeaderFormResult = () => {
+
+interface IHeroHeaderFormResultProps {
+  metricData: { cm: number; kg: number };
+}
+
+const HeroHeaderFormResult:FC<IHeroHeaderFormResultProps> = ({ metricData }) => {
   
     return (
       <div className="hero-header-form-result">
@@ -14,7 +19,7 @@ const HeroHeaderFormResult = () => {
               Your BMI is...
             </p>
             <p className="font_heading_l" style={{ color: "#FFF" }}>
-              {imperialBMIFunc(11, 11, 5, 11)}
+              {metricBMIFunc(metricData.cm, metricData.kg)}
             </p>
           </div>
           <div className="hero-header-form-result-text-container">

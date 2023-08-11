@@ -6,9 +6,10 @@ interface InputProps {
   className:
     | "hero-header-form-imperic-inputs"
     | "hero-header-form-meric-inputs";
+  dataHandler: (data:number) => void;
 }
 
-const Input: FC<InputProps> = ({ units, label, className }) => {
+const Input: FC<InputProps> = ({ units, label, className, dataHandler }) => {
   const [inputValue, setInputValue] = useState<string>("");
   const [isError, setIsError] = useState<boolean>(false);
 
@@ -17,6 +18,7 @@ const Input: FC<InputProps> = ({ units, label, className }) => {
   ): void => {
     if (Number(e.target.value) <= 999 && e.target.value !== "0") {
       setInputValue(e.target.value);
+      dataHandler(Number(e.target.value))
     } else {
       setIsError(true);
       setTimeout(() => {

@@ -5,7 +5,7 @@ const ImperialInputs = () => {
   return (
     <>
       <div className="hero-header-form-imperic-inputs-container">
-        <Input
+        {/* <Input
           units={"ft"}
           className="hero-header-form-imperic-inputs"
           label="Height"
@@ -20,7 +20,7 @@ const ImperialInputs = () => {
           label="Weight"
         />
 
-        <Input units={"lbs"} className="hero-header-form-imperic-inputs" />
+        <Input units={"lbs"} className="hero-header-form-imperic-inputs" /> */}
       </div>
     </>
   );

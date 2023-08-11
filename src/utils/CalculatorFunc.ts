@@ -1,13 +1,9 @@
-import { log } from "console";
-
-export const metricBMIFunc = (height: string, weight: string): number => {
-  const normalisedHeight: number = Number(
-    `${height[0]}.${height[1]}${height[2]}`
-  );
-  const normalisedWeight: number = Number(weight);
-  return Number(
-    (normalisedWeight / (normalisedHeight * normalisedHeight)).toFixed(1)
-  );
+export const metricBMIFunc = (cm: number, kg: number): number => {
+  const metricCalc: number = kg / Math.pow(cm / 100, 2);
+  if (Number.isNaN(metricCalc) || !Number.isFinite(metricCalc)) {
+    return 0;
+  }
+  return Number(metricCalc.toFixed(1));
 };
 
 export const imperialBMIFunc = (
@@ -16,10 +12,9 @@ export const imperialBMIFunc = (
   feet: number,
   inches: number
 ): number => {
-  const imperialCalc =
-    ((stone * 14 + pounds) / ((feet * 12 + inches) * (feet * 12 + inches))) *
-    703;
-  if (Number.isNaN(imperialCalc)) {
+  const imperialCalc: number =
+    ((stone * 14 + pounds) / Math.pow(feet * 12 + inches, 2)) * 703;
+  if (Number.isNaN(imperialCalc) || !Number.isFinite(imperialCalc)) {
     return 0;
   }
   return Number(imperialCalc.toFixed(1));

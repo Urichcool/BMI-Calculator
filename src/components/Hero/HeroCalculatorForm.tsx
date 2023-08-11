@@ -5,11 +5,18 @@ import HeroHeaderFormResult from "./HeroHeaderFormResult";
 
 const HeroCalculatorForm = () => {
   const [radioValue, setRadioValue] = useState<string>("metric");
+  const [metricData, setMetricData] = useState<{ cm: number, kg: number }>({
+    cm: 0,
+    kg: 0,
+  });
 
+  const metricDataHandler = (data: { cm: number, kg: number }): void => {
+    setMetricData(data)
+  }
 
   const changeValue = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setRadioValue(e.target.value);
-  }
+  };
 
   return (
     <div className="hero-header-calculator-form-background">
@@ -17,9 +24,9 @@ const HeroCalculatorForm = () => {
         <p className="font_heading_m">Enter your details below</p>
         <form>
           <HeroRadioButtons radioValue={radioValue} changeValue={changeValue} />
-          <HeroHeaderFormInputs radioValue={radioValue} />
+          <HeroHeaderFormInputs radioValue={radioValue} metricDataHandler={metricDataHandler} />
         </form>
-        <HeroHeaderFormResult />
+        <HeroHeaderFormResult metricData={metricData} />
       </div>
     </div>
   );
