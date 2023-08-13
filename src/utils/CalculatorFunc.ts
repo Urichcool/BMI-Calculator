@@ -19,3 +19,18 @@ export const imperialBMIFunc = (
   }
   return Number(imperialCalc.toFixed(1));
 };
+
+export const BMISuggestFunc = (
+  result: number
+): "underweight" | "a healthy weight" | "overweight" | "obese" => {
+  if (result < 18.5) {
+    return "underweight";
+  }
+  if (result >= 18.5 && result < 24.9) {
+    return "a healthy weight";
+  }
+  if (result >= 24.9 && result < 29.9) {
+    return "overweight";
+  }
+  return "obese";
+};
