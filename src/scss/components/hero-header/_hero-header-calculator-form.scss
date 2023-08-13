@@ -8,6 +8,8 @@
   background-color: $pure_white;
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
   border-radius: 16px;
+  margin-left: auto;
+  margin-right: auto;
   @include tablet {
     max-width: 686px;
     margin-top: 40px;
@@ -17,6 +19,7 @@
   @include desktop {
     position: absolute;
     max-width: 564px;
+
     margin-top: 0;
     top: 166px;
     left: 736px;
@@ -56,6 +59,11 @@
   &:hover,
   &:focus {
     border-color: $blue;
+
+    height: 484px;
+    top: 166px;
+    left: 736px;
+    margin: 0;
   }
 }
 
