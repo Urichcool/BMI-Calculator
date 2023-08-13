@@ -1,7 +1,7 @@
-import React from 'react';
-import LogoSvg from '../../images/icons/LogoSvg';
+import React from "react";
+import LogoSvg from "../../images/icons/LogoSvg";
 
-function HeroHeader() {
+const HeroHeader = () => {
   return (
     <>
       <div className="hero-header-background"></div>
@@ -17,11 +17,10 @@ function HeroHeader() {
             determinant of a healthy weight, it offers a valuable starting point
             to evaluate your overall health and well-being.
           </p>
-        
         </div>
       </header>
     </>
   );
-}
+};
 
 export default HeroHeader;
