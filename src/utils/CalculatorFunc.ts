@@ -34,3 +34,18 @@ export const BMISuggestFunc = (
   }
   return "obese";
 };
+
+export const MetricIdeaMassFunc = (cm: number):string => {
+  const downRange = (18.5 * Math.pow(cm, 2) / 10000).toFixed(1);
+  const upRange = ((24.9 * Math.pow(cm, 2)) / 10000).toFixed(1);
+  return `${downRange}kgs - ${upRange}kgs`
+} 
+
+export const ImperialIdeaMassFunc = (feet: number, inches:number): string => {
+  const downRange = (18.5 * Math.pow(feet * 12 + inches, 2)  / 10000).toFixed(
+    1
+  );
+  
+  const upRange = ((24.9 * Math.pow(feet * 12 + inches, 2)) / 10000 ).toFixed(1);
+  return `${downRange}kgs - ${upRange}kgs`;
+}; 

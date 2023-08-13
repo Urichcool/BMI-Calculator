@@ -3,6 +3,8 @@ import {
   imperialBMIFunc,
   metricBMIFunc,
   BMISuggestFunc,
+  MetricIdeaMassFunc,
+  ImperialIdeaMassFunc,
 } from "../../utils/CalculatorFunc";
 
 interface IHeroHeaderFormResultProps {
@@ -63,7 +65,16 @@ const HeroHeaderFormResult: FC<IHeroHeaderFormResultProps> = ({
             <div className="hero-header-form-result-text-container">
               <p className="font_body_s" style={{ color: "#FFF" }}>
                 Your BMI suggests you’re {BMISuggestFunc(result)}. Your ideal
-                weight is between {(18.5 * Math.pow(185, 2) / 10000).toFixed(1)} - 85.2kgs.
+                weight is between{" "}
+                <span
+                  className="font_body_s"
+                  style={{ color: "#FFF", fontWeight: "700" }}
+                >
+                  {radioValue === "metric"
+                    ? MetricIdeaMassFunc(cm)
+                    : ImperialIdeaMassFunc(5, 11)}
+                </span>
+                .
               </p>
             </div>
           </>
