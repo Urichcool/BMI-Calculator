@@ -6,6 +6,8 @@ export const metricBMIFunc = (cm: number, kg: number): number => {
   return Number(metricCalc.toFixed(1));
 };
 
+
+
 export const imperialBMIFunc = (
   stone: number,
   pounds: number,
@@ -19,6 +21,8 @@ export const imperialBMIFunc = (
   }
   return Number(imperialCalc.toFixed(1));
 };
+
+
 
 export const BMISuggestFunc = (
   result: number
@@ -35,17 +39,27 @@ export const BMISuggestFunc = (
   return "obese";
 };
 
-export const MetricIdeaMassFunc = (cm: number):string => {
-  const downRange = (18.5 * Math.pow(cm, 2) / 10000).toFixed(1);
-  const upRange = ((24.9 * Math.pow(cm, 2)) / 10000).toFixed(1);
-  return `${downRange}kgs - ${upRange}kgs`
-} 
 
-export const ImperialIdeaMassFunc = (feet: number, inches:number): string => {
-  const downRange = (18.5 * Math.pow(feet * 12 + inches, 2)  / 10000).toFixed(
-    1
-  );
-  
-  const upRange = ((24.9 * Math.pow(feet * 12 + inches, 2)) / 10000 ).toFixed(1);
+
+export const MetricIdeaMassFunc = (cm: number): string => {
+  const downRange: string = ((18.5 * Math.pow(cm, 2)) / 10000).toFixed(1);
+  const upRange: string = ((24.9 * Math.pow(cm, 2)) / 10000).toFixed(1);
   return `${downRange}kgs - ${upRange}kgs`;
-}; 
+};
+
+
+
+export const ImperialIdeaMassFunc = (feet: number, inches: number): string => {
+  const totalInches: number = feet * 12 + inches;
+  const idealMinWeight: number = Math.floor(
+    (18.5 * Math.pow(totalInches, 2)) / 703
+  );
+  const idealMaxWeight: number = Math.floor(
+    (24.9 * Math.pow(totalInches, 2)) / 703
+  );
+  const minStone: number = Math.floor(idealMinWeight / 14);
+  const minPounds: number = Math.floor(idealMinWeight % 14);
+  const maxStone: number = Math.floor(idealMaxWeight / 14);
+  const maxPounds: number = Math.floor(idealMaxWeight % 14);
+  return `${minStone}st ${minPounds}lbs - ${maxStone}st ${maxPounds}lbs`;
+};

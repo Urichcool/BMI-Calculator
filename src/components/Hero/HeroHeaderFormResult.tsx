@@ -72,7 +72,7 @@ const HeroHeaderFormResult: FC<IHeroHeaderFormResultProps> = ({
                 >
                   {radioValue === "metric"
                     ? MetricIdeaMassFunc(cm)
-                    : ImperialIdeaMassFunc(5, 11)}
+                    : ImperialIdeaMassFunc(ft, inch)}
                 </span>
                 .
               </p>
