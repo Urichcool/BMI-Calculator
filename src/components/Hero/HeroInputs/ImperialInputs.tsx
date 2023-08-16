@@ -38,7 +38,10 @@ const ImperialInputs: FC<IImperialInputsProps> = ({ imperialDataHandler }) => {
 
   return (
     <>
-      <div className="hero-header-form-imperic-inputs-container">
+      <div
+        className="hero-header-form-imperic-inputs-container"
+        data-testid="imperial inputs"
+      >
         <Input
           units={"ft"}
           className="hero-header-form-imperic-inputs"

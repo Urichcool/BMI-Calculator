@@ -10,9 +10,13 @@ const HeroRadioButtons: FC<IHeroRadioButtonsProps> = ({
   changeValue,
 }) => {
   return (
-    <div className="hero-header-calculator-form-radio-buttons">
+    <div
+      className="hero-header-calculator-form-radio-buttons"
+      data-testid="hero header calculator radio-buttons"
+    >
       <div className="hero-header-calculator-form-radio">
         <input
+          data-testid="metric btn"
           className="hero-header-calculator-form-radio-input"
           type="radio"
           id="metric"
@@ -26,6 +30,7 @@ const HeroRadioButtons: FC<IHeroRadioButtonsProps> = ({
       </div>
       <div className="hero-header-calculator-form-radio">
         <input
+          data-testid="imperial btn"
           className="hero-header-calculator-form-radio-input"
           type="radio"
           id="imperial"

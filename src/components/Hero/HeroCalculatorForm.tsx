@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import HeroHeaderFormInputs from "./HeroInputs/HeroHeaderInputs";
-import HeroRadioButtons from "./HeroInputs/HeroRadioButtons";
+import HeroRadioButtons from "./HeroRadioButtons";
 import HeroHeaderFormResult from "./HeroHeaderFormResult";
 
 const HeroCalculatorForm = () => {
@@ -39,7 +39,7 @@ const HeroCalculatorForm = () => {
     <div className="hero-header-calculator-form-background">
       <div className="hero-header-calculator-form-container">
         <p className="font_heading_m">Enter your details below</p>
-        <form>
+        <form data-testid="hero-calculator-form">
           <HeroRadioButtons radioValue={radioValue} changeValue={changeValue} />
           <HeroHeaderFormInputs
             radioValue={radioValue}

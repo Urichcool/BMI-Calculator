@@ -22,7 +22,7 @@ const MetricInputs: FC<IMetricInputsProps> = ({ metricDataHandler }) => {
   }, [metricDataHandler, cm, kg]);
 
   return (
-    <div className="hero-header-form-meric-inputs-container">
+    <div className="hero-header-form-meric-inputs-container" data-testid="metric inputs">
       <Input
         units={"cm"}
         className="hero-header-form-meric-inputs"
