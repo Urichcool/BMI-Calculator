@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 describe("Test App", () => {
-  test("render all sections", () => {
+  test("test render all sections", () => {
     render(<App />);
     const header: HTMLElement = screen.getByTestId("hero-header");
     const form: HTMLElement = screen.getByTestId("hero-calculator-form");
