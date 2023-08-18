@@ -5,7 +5,7 @@ const HeroHeader = () => {
   return (
     <>
       <div className="hero-header-background"></div>
-      <header>
+      <header data-testid="hero-header">
         <div className="hero-header-container">
           <LogoSvg />
           <h1 className="font_heading_l hero-header-title">
