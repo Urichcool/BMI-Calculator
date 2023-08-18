@@ -1,3 +1,31 @@
-.bmi-meaning-container{
-    padding-top: 72px;
+.bmi-meaning-background {
+  margin-top: 168px;
+  height: 258px;
+  border-radius: 32px;
+  background: #e7f5fe;
+  max-width: 375px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+
+.bmi-meaning-image {
+  width: 311px;
+  height: 354px;
+  position: absolute;
+  background-image: url("../../../images/BMI-meaning-img-375px.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 50%;
+  transform: translate(-50%, -27%);
+   @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 2dppx) {
+     background-image: url("../../../images/BMI-meaning-img-375px-retina.png");
+  }
 }
