@@ -3,7 +3,7 @@ import HeroCalculatorForm from "../HeroCalculatorForm";
 
 describe("input test", () => {
   test("error-test", () => {
-    render(<HeroCalculatorForm />);
+    render(<HeroCalculatorForm resultHandler={(data: number): void => {}} />);
     const input: HTMLElement[] = screen.getAllByTestId("input");
     fireEvent.input(input[0], { target: { value: "1234" } });
     const errorText = screen.getAllByTestId("error text");

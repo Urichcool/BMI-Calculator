@@ -3,21 +3,27 @@ import HeroCalculatorForm from "./HeroCalculatorForm";
 
 describe("Test Radio Buttons", () => {
   test("radio-btns-render", () => {
-    render(<HeroCalculatorForm />);
+    render(
+      <HeroCalculatorForm
+        resultHandler={(data: number): void => {
+          
+        }}
+      />
+    );
     const radioBtns: HTMLElement = screen.getByTestId(
       "hero header calculator radio-buttons"
     );
     expect(radioBtns).toBeInTheDocument();
   });
   test("metric-inputs-render", () => {
-    render(<HeroCalculatorForm />);
+    render(<HeroCalculatorForm resultHandler={(data: number): void => {}} />);
     const metricBtn: HTMLElement = screen.getByTestId("metric btn");
     expect(metricBtn).toBeChecked();
     const metricInputs: HTMLElement = screen.getByTestId("metric inputs");
     expect(metricInputs).toBeInTheDocument();
   });
   test("imperial-inputs-render", () => {
-    render(<HeroCalculatorForm />);
+    render(<HeroCalculatorForm resultHandler={(data: number): void => {}} />);
     const imperialBtn: HTMLElement = screen.getByTestId("imperial btn");
     fireEvent.click(imperialBtn);
     expect(imperialBtn).toBeChecked();

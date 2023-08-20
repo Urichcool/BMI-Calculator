@@ -16,12 +16,14 @@ interface IHeroHeaderFormResultProps {
     ft: number;
     inch: number;
   };
+  resultHandler: (data: number) => void;
 }
 
 const HeroHeaderFormResult: FC<IHeroHeaderFormResultProps> = ({
   metricData,
   imperialData,
   radioValue,
+  resultHandler
 }) => {
   const [result, setResult] = useState<number>(0);
 
@@ -33,6 +35,10 @@ const HeroHeaderFormResult: FC<IHeroHeaderFormResultProps> = ({
       ? setResult(imperialBMIFunc(st, lbs, ft, inch))
       : setResult(metricBMIFunc(cm, kg));
   }, [st, lbs, ft, inch, cm, kg, radioValue]);
+
+  useEffect(() => {
+    resultHandler(result);
+  }, [result, resultHandler]);
 
   return (
     <div className="hero-header-form-result">
