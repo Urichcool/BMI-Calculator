@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import HeroHeader from "./components/Hero/HeroHeader";
 import HeroCalculatorForm from "./components/Hero/HeroCalculatorForm";
 import BMIMeaning from "./components/BMI-meaning/BMIMeaning";
+import BMITips from "./components/BMI-tips/BMITips";
 
 function App() {
   const [result, setResult] = useState<number>(0);
@@ -19,6 +20,7 @@ function App() {
         <HeroHeader />
         <HeroCalculatorForm resultHandler={resultHandler} />
         <BMIMeaning result={result} />
+        <BMITips/>
       </div>
     </div>
   );
