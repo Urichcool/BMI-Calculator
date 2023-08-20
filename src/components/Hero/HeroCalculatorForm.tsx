@@ -1,35 +1,43 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, FC } from "react";
 import HeroHeaderFormInputs from "./HeroInputs/HeroHeaderInputs";
 import HeroRadioButtons from "./HeroRadioButtons";
 import HeroHeaderFormResult from "./HeroHeaderFormResult";
 
-const HeroCalculatorForm = () => {
+interface IHeroCalculatorFormProps {
+  resultHandler:(data:number) => void
+}
+
+const HeroCalculatorForm:FC<IHeroCalculatorFormProps> = ({ resultHandler }) => {
   const [radioValue, setRadioValue] = useState<string>("metric");
-  const [metricData, setMetricData] = useState<{ cm: number, kg: number }>({
+  const [metricData, setMetricData] = useState<{ cm: number; kg: number }>({
     cm: 0,
     kg: 0,
   });
-  const [imperialData, setImperialData] = useState<{ st: number, lbs: number, ft:number, inch:number }>({
+  const [imperialData, setImperialData] = useState<{
+    st: number;
+    lbs: number;
+    ft: number;
+    inch: number;
+  }>({
     st: 0,
     lbs: 0,
     ft: 0,
-    inch:0
+    inch: 0,
   });
 
   const metricDataHandler = useCallback(
     (data: { cm: number; kg: number }): void => {
       setMetricData(data);
-    }, [setMetricData]
-  ); 
+    },
+    [setMetricData]
+  );
 
-  const imperialDataHandler = useCallback((data: {
-    st: number;
-    lbs: number;
-    ft: number;
-    inch: number;
-  }): void => {
-    setImperialData(data);
-  }, [setImperialData]) 
+  const imperialDataHandler = useCallback(
+    (data: { st: number; lbs: number; ft: number; inch: number }): void => {
+      setImperialData(data);
+    },
+    [setImperialData]
+  );
 
   const changeValue = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setRadioValue(e.target.value);
@@ -48,9 +56,10 @@ const HeroCalculatorForm = () => {
           />
         </form>
         <HeroHeaderFormResult
-          radioValue = {radioValue}
+          radioValue={radioValue}
           metricData={metricData}
           imperialData={imperialData}
+          resultHandler={resultHandler}
         />
       </div>
     </div>

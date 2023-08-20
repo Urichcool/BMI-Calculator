@@ -8,9 +8,23 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  @include tablet {
+    left: 0;
+    transform: translate(0);
+    margin-top: 208px;
+    max-width: 315px;
+    height: 299px;
+    border-radius: 0px 32px 32px 0px;
+  }
+  @include desktop {
+    left: 140px;
+    margin-top: 0;
+    top: 946px;
+    max-width: 564px;
+    height: 388px;
+    border-radius: 32px;
+  }
 }
-
-
 
 .bmi-meaning-image {
   width: 311px;
@@ -22,10 +36,77 @@
   background-size: cover;
   left: 50%;
   transform: translate(-50%, -27%);
-   @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     (-webkit-min-device-pixel-ratio: 2),
     screen and (min-resolution: 2dppx) {
-     background-image: url("../../../images/BMI-meaning-img-375px-retina.png");
+    background-image: url("../../../images/BMI-meaning-img-375px-retina.png");
+  }
+  @include tablet {
+    background-image: url("../../../images/BMI-meaning-img-768px.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../../../images/BMI-meaning-img-768px-retina.png");
+    }
+    left: 0;
+    transform: translate(0, -27%);
+    height: 411px;
+  }
+  @include desktop {
+    background-image: url("../../../images/BMI-meaning-img-1440px.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../../../images/BMI-meaning-img-1440px-retina.png");
+    }
+    width: 468px;
+    height: 533px;
+    left: 50%;
+    transform: translate(-50%, -27%);
+  }
+}
+
+.bmi-meaning-image-text-container {
+  max-width: 328px;
+  position: absolute;
+  margin-top: 474px;
+  @include tablet {
+    margin-top: 131px;
+    right: 43px;
+    max-width: 331px;
+  }
+  @include desktop {
+    margin-top: 0;
+    top: 985px;
+    left: 835px;
+    max-width: 465px;
+  }
+}
+
+.bmi-meaning-image-title {
+  color: $gunmental;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -1.6px;
+  margin-bottom: 32px;
+  @include desktop {
+    font-size: 48px;
+    letter-spacing: -2.4px;
+  }
+}
+
+.bmi-meaning-icon {
+  display: none;
+  @include desktop {
+    display: block;
+    position: absolute;
+    top: 749px;
+    left: 1188px;
   }
 }
