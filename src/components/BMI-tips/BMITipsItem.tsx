@@ -10,11 +10,13 @@ interface IBMITipsItemProps {
 }
 
 const BMITipsItem:FC<IBMITipsItemProps> = ({svg, title, text}) => {
-    return (
-        <li>
-         {svg}   
-      </li>
-    );
+  return (
+    <li className="bmi-tips-list-item">
+      <div className="bmi-tips-icon">{svg}</div>
+      <h3 className="font_heading_m bmi-tips-title">{title}</h3>
+      <p className="font_body_m">{text}</p>
+    </li>
+  );
 }
 
 export default BMITipsItem;

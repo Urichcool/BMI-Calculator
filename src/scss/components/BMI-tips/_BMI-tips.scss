@@ -1,3 +1,31 @@
-.bmi-meaning-section{
-    margin-top: 944px;
+.bmi-tips-section {
+margin-top: 750px;
+width: 100vw;
+background: linear-gradient(315deg, rgba(214, 230, 254, 0.25)
+ 0%, rgba(214, 252, 254, 0) 100%);
+
 }
+
+
+.bmi-tips-list{
+padding: 56px 0px;
+}
+
+.bmi-tips-list-item{
+  margin-bottom: 40px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.bmi-tips-icon{
+  width: 64px;
+  height: 64px;
+  margin-bottom: 32px;
+}
+
+.bmi-tips-title{
+  margin-bottom: 24px;
+}
+
+

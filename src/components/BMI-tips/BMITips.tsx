@@ -31,12 +31,14 @@ const BMITips = () => {
     },
   ];
   return (
-    <section className="bmi-meaning-section">
-          <ul>
-              {tipsData.map(({ id, svg, title, text }) => 
-                  <BMITipsItem key={id} svg={svg} title={title} text={text}  />
-         )}
-      </ul>
+    <section className="bmi-tips-section">
+      <div className="container">
+        <ul className="bmi-tips-list">
+          {tipsData.map(({ id, svg, title, text }) => (
+            <BMITipsItem key={id} svg={svg} title={title} text={text} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

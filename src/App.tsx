@@ -16,12 +16,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
+      
         <HeroHeader />
         <HeroCalculatorForm resultHandler={resultHandler} />
         <BMIMeaning result={result} />
         <BMITips/>
-      </div>
+     
     </div>
   );
 }

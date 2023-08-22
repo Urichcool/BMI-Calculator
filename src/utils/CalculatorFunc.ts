@@ -66,7 +66,7 @@ export const ImperialIdeaMassFunc = (feet: number, inches: number): string => {
 
 export const BMIMeaningFunction = (result: number): string => {
   if (result === 0) {
-    return "";
+    return "Enter your height and weight and you’ll see what your BMI result means";
   }
   if (result < 18.5) {
     return "A BMI of less than 18.5 indicates that you are underweight, so you may need to put on some weight. You are recommended to ask your doctor or a dietitian for advice.";
