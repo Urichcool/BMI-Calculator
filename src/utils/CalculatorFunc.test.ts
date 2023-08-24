@@ -79,6 +79,8 @@ describe("BMIMeaningFunction", () => {
     );
   });
   test("Is empty string", () => {
-     expect(BMIMeaningFunction(0)).toBe("");
+     expect(BMIMeaningFunction(0)).toBe(
+       "Enter your height and weight and you’ll see what your BMI result means"
+     );
   })
 });
