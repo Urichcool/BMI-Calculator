@@ -1,0 +1,48 @@
+.BMI-limitation-section {
+  margin-top: 56px;
+}
+
+.BMI-limitation-container {
+  padding-top: 72px;
+  padding-bottom: 96px;
+}
+
+.BMI-limitation-title {
+  margin-bottom: 32px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -1.6px;
+  color: $gunmental;
+}
+
+.BMI-limitation-text {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.BMI-limitation-item {
+  padding: 24px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.BMI-limitation-item-icon-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.BMI-limitation-item-icon{
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+}
