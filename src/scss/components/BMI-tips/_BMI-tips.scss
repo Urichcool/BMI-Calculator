@@ -1,14 +1,27 @@
 .bmi-tips-section {
 margin-top: 750px;
-width: 100vw;
+width: 100%;
 background: linear-gradient(315deg, rgba(214, 230, 254, 0.25)
  0%, rgba(214, 252, 254, 0) 100%);
-
+@include tablet{
+ margin-top: 603px;
+}
+@include desktop{
+ margin-top: 96px;
+}
 }
 
 
 .bmi-tips-list{
 padding: 56px 0px;
+@include tablet{
+padding: 60px 0px;
+}
+@include desktop{
+  padding-top: 72px;
+  padding-bottom: 96px;
+  display: flex;
+}
 }
 
 .bmi-tips-list-item{
@@ -16,16 +29,43 @@ padding: 56px 0px;
   &:last-child{
     margin-bottom: 0;
   }
+  @include tablet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   @include desktop{
+    display:block;
+    margin-bottom: 0;
+    margin-right: 32px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
 }
 
 .bmi-tips-icon{
   width: 64px;
   height: 64px;
   margin-bottom: 32px;
+  @include tablet{
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+   @include desktop{
+    margin-bottom: 45px;
+    margin-right: 0px;
+  }
 }
 
 .bmi-tips-title{
   margin-bottom: 24px;
+}
+
+.bmi-tips-text{
+  @include desktop{
+    width: 365px;
+  }
 }
 
 

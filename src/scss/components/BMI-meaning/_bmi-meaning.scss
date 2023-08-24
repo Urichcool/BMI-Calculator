@@ -1,4 +1,12 @@
-
+.bmi-meaning-section {
+  @include desktop {
+    position: relative;
+    display: inline-block;
+    width: 1160px;
+    height: 533px;
+    margin-top: 265px;
+  }
+}
 
 .bmi-meaning-background {
   margin-top: 168px;
@@ -19,9 +27,9 @@
     border-radius: 0px 32px 32px 0px;
   }
   @include desktop {
-    left: 140px;
+    left: 0;
     margin-top: 0;
-    top: 946px;
+    bottom: 0;
     max-width: 564px;
     height: 388px;
     border-radius: 32px;
@@ -80,9 +88,8 @@
     max-width: 331px;
   }
   @include desktop {
-    margin-top: 0;
-    top: 985px;
-    left: 835px;
+    right: 0;
+    bottom: 40px;
     max-width: 465px;
   }
 }
@@ -107,7 +114,7 @@
   @include desktop {
     display: block;
     position: absolute;
-    top: 749px;
-    left: 1188px;
+    top: -52px;
+    right: 27px;
   }
 }

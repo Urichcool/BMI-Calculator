@@ -31,7 +31,7 @@ const BMITips = () => {
     },
   ];
   return (
-    <section className="bmi-tips-section">
+    <section className="bmi-tips-section" data-testid="bmi-tips">
       <div className="container">
         <ul className="bmi-tips-list">
           {tipsData.map(({ id, svg, title, text }) => (

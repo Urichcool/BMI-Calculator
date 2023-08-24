@@ -8,8 +8,8 @@ interface IBMIMeaningProps {
 
 const BMIMeaning: FC<IBMIMeaningProps> = ({ result }) => {
   return (
-    <section className="bmi-meaning-section">
-      <div className="container">
+    <div className="container">
+      <section className="bmi-meaning-section" data-testid="bmi-meaning">
         <div className="bmi-meaning-background">
           <div className="bmi-meaning-image"></div>
         </div>
@@ -20,10 +20,9 @@ const BMIMeaning: FC<IBMIMeaningProps> = ({ result }) => {
           </h2>
           <p className="font_body_m">{BMIMeaningFunction(result)}</p>
         </div>
-
         <BMIMeaningIcon />
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

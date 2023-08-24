@@ -16,12 +16,14 @@ function App() {
 
   return (
     <div className="App">
-      
-        <HeroHeader />
-        <HeroCalculatorForm resultHandler={resultHandler} />
-        <BMIMeaning result={result} />
-        <BMITips/>
-     
+      <div className="container">
+        <div className="hero-header-container">
+          <HeroHeader />
+          <HeroCalculatorForm resultHandler={resultHandler} />
+        </div>
+      </div>
+      <BMIMeaning result={result} />
+      <BMITips />
     </div>
   );
 }
