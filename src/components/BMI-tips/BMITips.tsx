@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import IconEating from "../../images/icons/IconEating";
 import IconExercise from "../../images/icons/IconExercise";
 import IconSleep from "../../images/icons/IconSleep";
 import BMITipsItem from "./BMITipsItem";
 
-const BMITips = () => {
+const BMITips:FC = () => {
   const tipsData: {
     id: number;
     svg: JSX.Element;

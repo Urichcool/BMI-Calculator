@@ -1,11 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import IconGender from "../../images/icons/IconGender";
 import IconMuscle from "../../images/icons/IconMuscle";
 import IconPregnancy from "../../images/icons/IconPregnancy";
 import IconRace from "../../images/icons/IconRace";
 import BMILimitationItem from "./BMILimitationItem";
+import BMILimitationIcon from "../../images/icons/BMILimitationIcon";
 
-const BMILimitation = () => {
+const BMILimitation:FC = () => {
   const limitationsData: {
     id: number;
     svg: JSX.Element;
@@ -45,8 +46,8 @@ const BMILimitation = () => {
   ];
   return (
     <div className="container">
-      <section>
-        <div className="BMI-limitation-container">
+      <section className="BMI-limitation-section" data-testid="BMI-limitation">
+        <div className="BMI-limitation-text-container">
           <h2 className="BMI-limitation-title">Limitations of BMI</h2>
           <p className="font_body_m BMI-limitation-text">
             Although BMI is often a practical indicator of healthy weight, it is
@@ -54,11 +55,14 @@ const BMILimitation = () => {
             consider their BMI outcomes, and in certain cases, the measurement
             may not be beneficial to use.
           </p>
-          <ul>
-            {limitationsData.map(({ id, svg, title, text }) => (
-              <BMILimitationItem key={id} svg={svg} title={title} text={text} />
-            ))}
-          </ul>
+        </div>
+        <ul className="BMI-limitation-list">
+          {limitationsData.map(({ id, svg, title, text }) => (
+            <BMILimitationItem key={id} svg={svg} title={title} text={text} />
+          ))}
+        </ul>
+        <div className="BMI-limitation-icon">
+          <BMILimitationIcon />
         </div>
       </section>
     </div>

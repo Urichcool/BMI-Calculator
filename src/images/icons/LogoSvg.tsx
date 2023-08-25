@@ -1,6 +1,5 @@
-import React from 'react';
-
-function LogoSvg() {
+import React, { FC } from 'react';
+const LogoSvg:FC = () => {
     return (
       <svg
         className="hero-header-logo"

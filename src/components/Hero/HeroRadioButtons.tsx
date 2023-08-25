@@ -24,7 +24,10 @@ const HeroRadioButtons: FC<IHeroRadioButtonsProps> = ({
           checked={radioValue === "metric"}
           onChange={changeValue}
         />
-        <label className="font_body_m_bold hero-header-calculator-form-radio-label">
+        <label
+          htmlFor="metric"
+          className="font_body_m_bold hero-header-calculator-form-radio-label"
+        >
           Metric
         </label>
       </div>
@@ -38,7 +41,10 @@ const HeroRadioButtons: FC<IHeroRadioButtonsProps> = ({
           checked={radioValue === "imperial"}
           onChange={changeValue}
         />
-        <label className="font_body_m_bold hero-header-calculator-form-radio-label">
+        <label
+          htmlFor="imperial"
+          className="font_body_m_bold hero-header-calculator-form-radio-label"
+        >
           Imperial
         </label>
       </div>

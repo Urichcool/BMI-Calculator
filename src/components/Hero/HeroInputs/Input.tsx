@@ -29,9 +29,11 @@ const Input: FC<InputProps> = ({ units, label, className, dataHandler }) => {
 
   return (
     <div className={className}>
-      <label className="font_body_s hero-header-form-label">{label}</label>
+      <label htmlFor={label} className="font_body_s hero-header-form-label">{label}
+      </label>
       <div style={{ position: "relative" }}>
         <input
+          id={label}
           data-testid="input"
           value={inputValue}
           onChange={inputOnChangeHandler}

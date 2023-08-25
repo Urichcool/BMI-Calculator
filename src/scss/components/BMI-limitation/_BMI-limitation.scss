@@ -1,15 +1,30 @@
 .BMI-limitation-section {
-  margin-top: 56px;
+  position: relative;
+  margin-top: 72px;
+  margin-bottom: 96px;
+  @include tablet {
+    margin-top: 96px;
+  }
+  @include desktop {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    height: 704px;
+  }
 }
 
-.BMI-limitation-container {
-  padding-top: 72px;
-  padding-bottom: 96px;
+.BMI-limitation-text-container {
+  text-align: center;
+  @include desktop {
+    position: absolute;
+    text-align: start;
+    top: 0;
+    left: 0;
+    width: 564px;
+  }
 }
 
 .BMI-limitation-title {
   margin-bottom: 32px;
-  text-align: center;
   font-family: Inter;
   font-size: 32px;
   font-style: normal;
@@ -17,11 +32,45 @@
   line-height: 110%;
   letter-spacing: -1.6px;
   color: $gunmental;
+  @include desktop {
+    margin-bottom: 35px;
+    font-size: 48px;
+    letter-spacing: -2.4px;
+  }
 }
 
 .BMI-limitation-text {
-  text-align: center;
   margin-bottom: 56px;
+}
+
+.BMI-limitation-icon {
+  display: none;
+  @include desktop {
+    display: block;
+    width: 94px;
+    height: 122px;
+    position: absolute;
+    left: 165px;
+    top: 251px;
+  }
+}
+
+.BMI-limitation-list {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 335px 335px;
+    grid-gap: 24px 15px;
+    justify-content: center;
+  }
+  @include desktop {
+    width: 961px;
+    grid-template-columns: 365px 365px;
+    position: absolute;
+    right: 0;
+   grid-gap: 24px 32px;
+   justify-content: end;
+  
+  }
 }
 
 .BMI-limitation-item {
@@ -33,15 +82,44 @@
   &:last-child {
     margin-bottom: 0;
   }
+  @include tablet {
+    padding: 32px;
+    margin: 0;
+    &:last-child {
+      grid-column: 1 / 3;
+      place-self: center;
+      width: 50%;
+    }
+  }
+  @include desktop {
+    &:first-child {
+      grid-column: 1 / 3;
+      place-self: end;
+      width: 50%;
+      margin-right: 99px;
+      margin-bottom: 8px;
+    }
+    &:nth-child(4){
+ right: 596px; 
+ bottom: 0;
+ position: absolute;
+    }
+    &:last-child {
+ margin-right: 199px;
+  grid-column: 2 / -1;
+      place-self: end;
+      width: 100%;
+    }
+  }
 }
 
-.BMI-limitation-item-icon-container{
+.BMI-limitation-item-icon-container {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.BMI-limitation-item-icon{
+.BMI-limitation-item-icon {
   margin-right: 16px;
   width: 32px;
   height: 32px;
