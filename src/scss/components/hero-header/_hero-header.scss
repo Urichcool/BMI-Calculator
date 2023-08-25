@@ -43,10 +43,14 @@
   }
 }
 
-.hero-header-logo {
-  width: 40px;
+
+
+.hero-header-logo-link{
+  border-radius: 50%;
+ width: 40px;
   height: 40px;
   margin-bottom: 24px;
+  transition: 500ms;
   @include tablet {
     margin-bottom: 40px;
   }
@@ -54,6 +58,10 @@
     width: 64px;
     height: 64px;
     margin-bottom: 127px;
+  }
+  &:hover,
+  &:focus{
+  box-shadow: 0 0 5px 5px $blue;
   }
 }
 

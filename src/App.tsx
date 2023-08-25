@@ -3,6 +3,7 @@ import HeroHeader from "./components/Hero/HeroHeader";
 import HeroCalculatorForm from "./components/Hero/HeroCalculatorForm";
 import BMIMeaning from "./components/BMI-meaning/BMIMeaning";
 import BMITips from "./components/BMI-tips/BMITips";
+import BMILimitation from "./components/BMI-limitation/BMILimitation";
 
 function App() {
   const [result, setResult] = useState<number>(0);
@@ -24,6 +25,7 @@ function App() {
       </div>
       <BMIMeaning result={result} />
       <BMITips />
+      <BMILimitation/>
     </div>
   );
 }
