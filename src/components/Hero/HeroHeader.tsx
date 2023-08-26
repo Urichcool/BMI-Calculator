@@ -7,7 +7,7 @@ const HeroHeader: FC = () => {
       <div className="hero-header-background"></div>
       <header data-testid="hero-header">
         <div className="hero-header-text-container">
-          <a href="/" className="hero-header-logo-link">
+          <a href="*" className="hero-header-logo-link">
             <LogoSvg />
           </a>
           <h1 className="font_heading_l hero-header-title">
