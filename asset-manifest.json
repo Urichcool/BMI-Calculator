@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BMI-Calculator/static/css/main.9c65e81e.css",
-    "main.js": "/BMI-Calculator/static/js/main.379f5cc6.js",
+    "main.js": "/BMI-Calculator/static/js/main.0307fdb4.js",
     "static/js/787.7a0450f2.chunk.js": "/BMI-Calculator/static/js/787.7a0450f2.chunk.js",
     "static/media/BMI-meaning-img-1440px-retina.png": "/BMI-Calculator/static/media/BMI-meaning-img-1440px-retina.6993d2a106c3465ace1e.png",
     "static/media/BMI-meaning-img-768px-retina.png": "/BMI-Calculator/static/media/BMI-meaning-img-768px-retina.51efa303d7cbd863b108.png",
@@ -12,11 +12,11 @@
     "index.html": "/BMI-Calculator/index.html",
     "static/media/radio-cheked.svg": "/BMI-Calculator/static/media/radio-cheked.8d93e8151d46ec1b0c22.svg",
     "main.9c65e81e.css.map": "/BMI-Calculator/static/css/main.9c65e81e.css.map",
-    "main.379f5cc6.js.map": "/BMI-Calculator/static/js/main.379f5cc6.js.map",
+    "main.0307fdb4.js.map": "/BMI-Calculator/static/js/main.0307fdb4.js.map",
     "787.7a0450f2.chunk.js.map": "/BMI-Calculator/static/js/787.7a0450f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c65e81e.css",
-    "static/js/main.379f5cc6.js"
+    "static/js/main.0307fdb4.js"
   ]
 }
